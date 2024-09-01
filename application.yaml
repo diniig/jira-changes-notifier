@@ -1,0 +1,10 @@
+search:
+  - name: 'Assigned to me'
+    frequency: 60s
+    query: project = PSUPCLFRM AND resolution = Unresolved AND assignee in (user_id) ORDER BY priority DESC, updated DESC
+    fields:
+      - summary
+      - updated
+      - status
+      - assignee
+    maxResults: 15
