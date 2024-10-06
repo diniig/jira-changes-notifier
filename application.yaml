@@ -1,10 +1,29 @@
-search:
-  - name: 'Assigned to me'
-    frequency: 60s
-    query: project = PSUPCLFRM AND resolution = Unresolved AND assignee in (user_id) ORDER BY priority DESC, updated DESC
-    fields:
-      - summary
-      - updated
-      - status
-      - assignee
-    maxResults: 15
+{
+  "jira_url": "http://jira.com",
+	"searches": [
+		{
+			"name": "Assigned to me, sup",
+			"frequency": "63s",
+			"query": "project = PSUPCLFRM AND resolution = Unresolved AND assignee in (user_id) ORDER BY priority DESC, updated DESC",
+			"fields": [
+				"summary",
+				"updated",
+				"status",
+				"assignee"
+			],
+			"max_results": 15
+		},
+				{
+			"name": "Assigned to me, dev",
+			"frequency": "34s",
+			"query": "project = PSUPCLFRM AND resolution = Unresolved AND assignee in (user_id) ORDER BY priority DESC, updated DESC",
+			"fields": [
+				"summary",
+				"updated",
+				"status",
+				"assignee"
+			],
+			"max_results": 15
+		}
+	]
+}
